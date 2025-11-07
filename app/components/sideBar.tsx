@@ -10,7 +10,7 @@ export default function SideBar() {
     <>
       {/* Hamburger button for mobile */}
       <button
-        className="lg:hidden fixed top-6 left-6 z-50 p-3 bg-black text-white rounded-xl hover:scale-110 transition-all duration-200"
+        className="lg:hidden fixed top-6 left-6 z-50 p-3 bg-c2 text-white rounded-xl hover:scale-110 transition-all duration-200"
         onClick={() => setIsOpen(!isOpen)}
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -26,12 +26,12 @@ export default function SideBar() {
         />
       )}
 
-      <div className={`fixed lg:static inset-y-0 border-r-[3px] border-black left-0 z-40 lg:w-80 bg-white text-black transform transition-all duration-300 ease-in-out ${isOpen ? 'translate-x-0 shadow-2xl' : '-translate-x-full lg:translate-x-0'} flex flex-col overflow-hidden`}>
+      <div className={`fixed lg:static inset-y-0 border-r-[3px] border-c2 left-0 z-40 lg:w-80 bg-white text-c2 transform transition-all duration-300 ease-in-out ${isOpen ? 'translate-x-0 shadow-2xl' : '-translate-x-full lg:translate-x-0'} flex flex-col overflow-hidden`}>
         <div className="p-8 mt-15">
           <div className="flex items-center justify-center space-x-3">
-            <h1 className="text-3xl font-black text-gray-900 text-center">ENNAH OULDLAKHLIFA</h1>
+            <h1 className="text-3xl font-bold text-c2 text-center">ENNAH OULDLAKHLIFA</h1>
           </div>
-          <div className="w-16 h-1 bg-[#FFCC0D] mx-auto mt-4"></div>
+          <div className="w-16 h-1 bg-c1 mx-auto mt-4"></div>
         </div>
 
         <div className="flex-1 flex flex-col  items-center px-6">
@@ -40,9 +40,9 @@ export default function SideBar() {
               <button
                 key={p}
                 onClick={() => setPage(p)}
-                className={`block px-4 py-2 ${page === p ? 'bg-[#FFCC0D]' : 'hover:border-dotted hover:border-[1px]'} w-full text-center`}
+                className={`block px-4 py-2 ${page === p ? 'bg-c1' : 'hover:border-dotted hover:border-[1px]'} w-full text-center`}
               >
-                <span className="font-semibold text-black uppercase">{p}</span>
+                <span className="font-semibold text-c2 uppercase">{p}</span>
               </button>
             ))}
           </nav>
@@ -50,11 +50,11 @@ export default function SideBar() {
 
         <div className="">
           <div className="px-6">
-            <div className="border-t border-[2px] border-black"></div>
+            <div className="border-t border-[2px] border-c2"></div>
           </div>
 
           <div className="p-6">
-            <p className="text-sm font-semibold text-black mb-4 text-center">Follow Me</p>
+            <p className="text-sm font-semibold text-c2 mb-4 text-center">Follow Me</p>
             <div className="flex justify-center space-x-4">
               {[
                   { icon: "M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z", name: "Facebook" },
@@ -65,20 +65,19 @@ export default function SideBar() {
                 <a
                   key={index}
                   href="#"
-                  className="w-10 h-10 bg-white  flex items-center justify-center shadow-sm hover:shadow-md hover:scale-110 transition-all duration-200 group border border-black"
+                  className="w-10 h-10 bg-white  flex items-center justify-center shadow-sm hover:shadow-md hover:scale-110 transition-all duration-200 group border border-c2"
                 >
-                  <svg className="w-5 h-5 text-black group-hover:text-[#FFCC0D]" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-c2 group-hover:text-c1" viewBox="0 0 24 24">
                     <path fill="currentColor" d={social.icon} />
                   </svg>
                 </a>
               ))}
             </div>
-          </div>
-
-          <div className="px-6 py-4 bg-white">
-            <p className="text-xs text-gray-500 text-center">
-              © {year} Ouldlakhlifa Ennah. All rights reserved.
-            </p>
+            <div className="px-6 py-4 bg-white">
+                <p className="text-xs text-gray-500 text-center">
+                © {year} Ouldlakhlifa Ennah. All rights reserved.
+                </p>
+            </div>
           </div>
         </div>
       </div>
