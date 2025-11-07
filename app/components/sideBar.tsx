@@ -26,10 +26,10 @@ export default function SideBar() {
         />
       )}
 
-      <div className={`fixed lg:static inset-y-0 border-r-[3px] border-c2 left-0 z-40 lg:w-80 bg-white text-c2 transform transition-all duration-300 ease-in-out ${isOpen ? 'translate-x-0 shadow-2xl' : '-translate-x-full lg:translate-x-0'} flex flex-col overflow-hidden`}>
+      <div className={`fixed inset-y-0 border-r-[3px] border-c2 left-0 z-40 lg:w-80 bg-white text-c2 transform transition-all duration-300 ease-in-out ${isOpen ? 'translate-x-0 shadow-2xl' : '-translate-x-full lg:translate-x-0'} flex flex-col overflow-hidden`}>
         <div className="p-8 mt-15">
           <div className="flex items-center justify-center space-x-3">
-            <h1 className="text-3xl font-bold text-c2 text-center">ENNAH OULDLAKHLIFA</h1>
+            <h1 className="text-3xl font-bold text-c2 text-center font-serif">ENNAH OULDLAKHLIFA</h1>
           </div>
           <div className="w-16 h-1 bg-c1 mx-auto mt-4"></div>
         </div>
