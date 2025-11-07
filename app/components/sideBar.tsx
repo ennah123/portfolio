@@ -40,7 +40,7 @@ export default function SideBar() {
               <button
                 key={p}
                 onClick={() => setPage(p)}
-                className={`block px-4 py-2 ${page === p ? 'bg-c1' : 'hover:border-dotted hover:border-[1px]'} w-full text-center`}
+                className={`block px-4 py-2 ${page === p ? 'bg-c1' : 'hover:border-dotted hover:border-[1px]'} w-full text-center transition-all duration-200`}
               >
                 <span className="font-semibold text-c2 uppercase">{p}</span>
               </button>
