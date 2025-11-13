@@ -107,15 +107,15 @@ const TechStack = () => {
   const currentTechnologies = stack === 'all' ? allTechnologies : techStacks[stack]
 
   return (
-    <div className="min-h-screen flex items-center justify-center w-full px-4 py-16 bg-white">
+    <div className="min-h-screen flex items-center justify-center w-full px-4 py-16 bg-white dark:bg-c2">
       <div className="flex flex-col items-center justify-center gap-12 max-w-6xl w-full">
         
-        <div className="text-center max-w-2xl w-full">
-          <h2 className="text-2xl text-c2 sm:text-3xl lg:text-4xl font-serif">
+        <div className="text-start max-w-2xl w-full">
+          <h1 className="text-2xl dark:text-gray-300 text-c2 sm:text-3xl lg:text-4xl font-serif">
             Tech Skills
-          </h2>
+          </h1>
           
-          <div className="w-20 h-1 bg-c1 mx-auto mt-4 mb-8"></div>
+          <div className="w-20 h-1 bg-c1 mx-auto lg:mx-0 mt-4 mb-8"></div>
 
           <div className='my-10 flex flex-wrap gap-3 justify-center'>
             <button 
@@ -131,7 +131,7 @@ const TechStack = () => {
                 key={category}
                 onClick={() => setStack(category)}
                 className={`text-c2 px-4 py-2 font-sans font-bold text-xs capitalize transition-all duration-200 ${
-                  stack === category ? 'bg-c1 transform scale-105' : 'bg-c3 hover:bg-c1/80'
+                  stack === category ? 'bg-c1 transform scale-105' : ' dark:bg-dc2 dark:text-gray-300 bg-c3 hover:bg-c1/80'
                 }`}
               >
                 {category}
