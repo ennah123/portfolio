@@ -9,27 +9,38 @@ export default function SideBar() {
   return (
     <>
       {/* Hamburger button for mobile */}
-      <button
-        className="lg:hidden fixed top-6 left-6 z-50 p-3 bg-c2 text-white rounded-xl hover:scale-110 transition-all duration-200"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
+        <div className="lg:hidden text-c2 flex justify-between shadow-inner
+            [box-shadow:inset_3px_6px_6px_6px_rgba(255,255,255,0.9)] w-full items-center fixed top-6 z-50 py-3 px-8 
+                bg-white/30 
+                backdrop-blur-sm 
+                border border-white dark:bg-c2
+                rounded-xl 
+                hover:scale-110 
+                transition-all 
+                duration-200
+                hover:bg-white/15
+                hover:backdrop-blur-xl
+                hover:border-white/30"> 
+          <img src="/assets/logo-ennah-light.svg" width={80} />
+          <button  onClick={() => setIsOpen(!isOpen)}>
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
 
       {/* Overlay for mobile */}
       {isOpen && (
         <div 
-          className="lg:hidden fixed inset-0 backdrop-blur-sm z-30"
+          className="lg:hidden fixed inset-0 backdrop-blur-sm z-30 "
           onClick={() => setIsOpen(false)}
         />
       )}
 
-      <div className={`fixed inset-y-0 border-r-[3px] border-c2 left-0 z-40 lg:w-80 bg-white text-c2 transform transition-all duration-300 ease-in-out ${isOpen ? 'translate-x-0 shadow-2xl' : '-translate-x-full lg:translate-x-0'} flex flex-col overflow-hidden`}>
+      <div className={`fixed inset-y-0 border-r-[3px] dark:border-zinc-500 border-c2 left-0 z-40 lg:w-80 dark:bg-c2 bg-white text-c2 transform transition-all duration-300 ease-in-out ${isOpen ? 'translate-x-0 shadow-2xl' : '-translate-x-full lg:translate-x-0'} flex flex-col overflow-hidden`}>
         <div className="p-8 mt-15">
           <div className="flex items-center justify-center space-x-3">
-            <h1 className="text-3xl font-bold text-c2 text-center font-serif">ENNAH OULDLAKHLIFA</h1>
+            <h1 className="text-3xl text-c2 text-center dark:text-zinc-200  font-extrabold">Ennah OULDLAKHLIFA</h1>
           </div>
           <div className="w-16 h-1 bg-c1 mx-auto mt-4"></div>
         </div>
@@ -40,9 +51,9 @@ export default function SideBar() {
               <button
                 key={p}
                 onClick={() => setPage(p)}
-                className={`block px-4 py-2 ${page === p ? 'bg-c1' : 'hover:border-dotted hover:border-[1px]'} w-full text-center transition-all duration-200`}
+                className={`block px-4 py-2 ${page === p ? 'bg-c1 text-c2' : 'hover:border-dotted hover:border-[1px] dark:text-zinc-200 text-c2 dark:hover:bg-c2  hover:bg-c3 border-[1px] border-white'} w-full text-center transition-all duration-200`}
               >
-                <span className="font-semibold text-c2 uppercase">{p}</span>
+                <span className="font-semibold ">{p}</span>
               </button>
             ))}
           </nav>
@@ -50,11 +61,11 @@ export default function SideBar() {
 
         <div className="">
           <div className="px-6">
-            <div className="border-t border-[2px] border-c2"></div>
+            <div className="border-t border-[2px] dark:border-zinc-500 border-c2"></div>
           </div>
 
           <div className="p-6">
-            <p className="text-sm font-semibold text-c2 mb-4 text-center">Follow Me</p>
+            <p className="text-sm font-semibold dark:text-c1 text-c2 mb-4 text-center">Follow Me</p>
             <div className="flex justify-center space-x-4">
               {[
                   { icon: "M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z", name: "Facebook" },
@@ -65,16 +76,16 @@ export default function SideBar() {
                 <a
                   key={index}
                   href="#"
-                  className="w-10 h-10 bg-white  flex items-center justify-center shadow-sm hover:shadow-md hover:scale-110 transition-all duration-200 group border border-c2"
+                  className="w-10 h-10   flex items-center justify-center shadow-sm hover:shadow-md hover:scale-110 transition-all duration-200 group border dark:border-zinc-200 border-c2"
                 >
-                  <svg className="w-5 h-5 text-c2 group-hover:text-c1" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 dark:text-zinc-200 text-c2 group-hover:text-c1" viewBox="0 0 24 24">
                     <path fill="currentColor" d={social.icon} />
                   </svg>
                 </a>
               ))}
             </div>
-            <div className="px-6 py-4 bg-white">
-                <p className="text-xs text-gray-500 text-center">
+            <div className="px-6 py-4 ">
+                <p className="text-xs dark:text-gray-400 text-gray-500 text-center">
                 © {year} Ouldlakhlifa Ennah. All rights reserved.
                 </p>
             </div>
