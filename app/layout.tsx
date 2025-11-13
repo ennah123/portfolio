@@ -1,10 +1,22 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import SideBar from "@/app/components/sideBar";
-import SectionProgress from "./components/scrollProgress";
-import ScrollIndicator from "./components/scrollProgress";
+import SideBar from "@/app/components/SideBar";
+import SectionProgress from "./components/ScrollProgress";
+import ScrollIndicator from "./components/ScrollProgress";
+import { Tourney, Funnel_Display } from 'next/font/google'
 
+const climateCrisis = Tourney({ 
+  subsets: ['latin'],
+  weight: '500', // Climate Crisis only has one weight (400)
+  variable: '--font-climate-crisis',
+})
+
+const comicRelief = Funnel_Display({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-comic-relief',
+})
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -26,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${climateCrisis.variable} ${comicRelief.variable}`}>
       <head>
         <link 
           rel="stylesheet" 
