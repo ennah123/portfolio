@@ -10,13 +10,14 @@
   --color-foreground: var(--foreground);
   --color-c1: #FFCC0D;
   --color-c2: #1a1a1a;
+  --color-dc2: #292924;
   /* 111827 1a1a1a */
   --color-c3: #F2F2F2;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 .fhhfhfh{
-  color: #151512;
+  color: #292924;
 }
 @media (prefers-color-scheme: dark) {
   :root {
