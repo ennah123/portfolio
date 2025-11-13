@@ -5,7 +5,7 @@ import TechStack from "./components/TechStack";
 
 export default function Home() {
   return (
-     <div className="w-full ">
+     <div className="w-full bg-white dark:bg-c2">
       <Hero />
       <AbouteMe/>
       <Education/>
